@@ -11,10 +11,6 @@ class ApplicationController < Sinatra::Base
     subject.to_json
     end
 
-    get '/subjects/:name' do
-subject = Subject.find(params[:name])
-subject.tojson
-    end
 
       post "/resources" do
    new_resource = Resource.create(
@@ -33,14 +29,17 @@ end
         # deleteResource.to_json
       end
 
-    #   patch '/users/:id' do
-    #     user = User.find(params[:id])
-    #     user.update(
-    #       name: params[:name]
-    #       drawings: params[:drawings]
-    # )
-    # user.to_json
-    #   end 
+      patch '/resources/:id' do
+        resource = Resource.find_by(params[:id])
+        resource.update(
+          name: params[:name],
+          description: params[:description],
+          url: params[:url],
+          subject_id: params[:subject_id]
+    )
+    resource.to_json
+      end 
+    
 
       get "/resources" do
 
