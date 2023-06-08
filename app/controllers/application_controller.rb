@@ -8,7 +8,7 @@ class ApplicationController < Sinatra::Base
 
       get '/subjects/:id' do
     subject = Subject.find(params[:id])
-    subject.to_json
+    subject.to_json(include: :resources)
     end
 
 
@@ -26,18 +26,17 @@ end
       delete "/resources/:id" do
         deleteResource = Resource.find(params[:id])
         deleteResource.destroy
-        # deleteResource.to_json
       end
 
       patch '/resources/:id' do
-        resource = Resource.find_by(params[:id])
+        resource = Resource.find(params[:id])
         resource.update(
           name: params[:name],
           description: params[:description],
           url: params[:url],
           subject_id: params[:subject_id]
     )
-    resource.to_json
+    resource.to_json 
       end 
     
 
@@ -47,12 +46,12 @@ end
         resource.to_json
     
       end
-    
+
       get "/resources/:id" do
-    
+
         resource = Resource.find(params[:id])
         resource.to_json
-    
+
       end
 
 end
