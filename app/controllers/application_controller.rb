@@ -13,13 +13,13 @@ class ApplicationController < Sinatra::Base
 
 
       post "/resources" do
-   new_resource = Resource.create(
+  resource = Resource.create(
     name: params[:name],
     description: params[:description],
     url: params[:url],
     subject_id: params[:subject_id]
    )
-   new_resource.to_json
+   resource.to_json
 
 end
 

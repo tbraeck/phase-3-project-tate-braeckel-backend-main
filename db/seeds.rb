@@ -54,15 +54,46 @@ Subject.create!([{
                             url: "www.faker.com",
                             subject_id: 2
 
-                          }, {
+                          }, 
+                          {
                             name: "the thingy resource",
                             description: "blah blah blah",
                             url: "www.faker.com",
                             subject_id: 3
 
 
-                          }, {
+                          }, 
+                          {
                             name: "the thingy resource",
+                            description: "blah blah blah",
+                            url: "www.faker.com",
+                            subject_id: 4
+
+                          },
+                          {
+                            name: "the pingy resource",
+                            description: "blah blah blah",
+                            url: "www.faker.com",
+                            subject_id: 1
+
+                          },
+                          {
+                            name: "the pingy resource",
+                            description: "blah blah blah",
+                            url: "www.faker.com",
+                            subject_id: 2
+
+                          }, 
+                          {
+                            name: "the pingy resource",
+                            description: "blah blah blah",
+                            url: "www.faker.com",
+                            subject_id: 3
+
+
+                          }, 
+                          {
+                            name: "the pingy resource",
                             description: "blah blah blah",
                             url: "www.faker.com",
                             subject_id: 4
