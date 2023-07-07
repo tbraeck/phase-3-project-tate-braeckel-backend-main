@@ -1,14 +1,5 @@
 puts "🌱 Seeding things..."
 
-# Seed your database here
-# User.create(name: "Brooke", password: "password")
-# User.create(name: "Bob", password: "1234")
-# User.create(name: "David", password: "watermelon")
-
-
-# Drawing.destroy_all
-
-
 Subject.create!([
   {
   name: "Art",
